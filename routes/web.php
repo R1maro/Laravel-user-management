@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Training;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,12 @@ Route::get('/models',function (){
 //after use Training model on top we can type only Training without model address:
 Route::get('/model/{training}',function (Training $training){
    return $training;
+});
+
+Route::get('/myuser/{user}',function (User $user){
+   return $user;
+});
+
+Route::get('/about',function (){
+   return Training::whereFirstName('r1maro')->first();
 });
