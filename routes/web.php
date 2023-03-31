@@ -48,3 +48,7 @@ Route::get('/myuser/{user}',function (User $user){
 Route::get('/about',function (){
    return Training::whereFirstName('r1maro')->first();
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
