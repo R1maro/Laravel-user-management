@@ -36,7 +36,7 @@ Route::get('/models',function (){
 //});
 
 
-//after use Training model on top we can type only Training without model address:
+//after use Training model trait on top we can type only Training without model address:
 Route::get('/model/{training}',function (Training $training){
    return $training;
 });
