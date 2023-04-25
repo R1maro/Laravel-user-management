@@ -5,40 +5,40 @@
 
     <h1>Users</h1>
     <div class="tbl-header">
-        <table cellpadding="0" cellspacing="0" border="0">
+        <table cellpadding="0" cellspacing="0" class="table table-hover">
             <thead>
             <tr>
                 <th>Id</th>
-                <th>First_name</th>
-                <th>Last_name</th>
-                <th>Age</th>
-                <th>Mobile</th>
-                <th>Deleted_at</th>
-                <th>Created_at</th>
-                <th>updated_at</th>
+                <th>Name</th>
+                <th>Email</th>
                 <th>-</th>
             </tr>
             </thead>
-        </table>
-    </div>
-    <div class="tbl-content">
-        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody class="tbl-content">
+            @foreach($users as $user)
+                <tr>
+                    <td>
+                        {{$user->id}}
+                    </td>
 
-            <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="" style="color: gray">Go to profile</a>
-                </td>
-                <td></td>
-                <td>
-                    <button>Del</button>
-                    <button>...</button>
-                </td>
-            </tr>
+                    <td>
+                        {{$user->name}}
+                    </td>
+
+                    <td>
+                        {{$user->email}}
+                    </td>
+
+                    <td>
+                        -
+                    </td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
+        <span class="pagination">
+        {{$users->links()}}
+        </span>
     </div>
 
 
@@ -52,6 +52,6 @@
 
 @endsection
 
-@section('test')
-    {{$users}}
-@endsection
+{{--@section('test')--}}
+{{--    {{$users}}--}}
+{{--@endsection--}}
