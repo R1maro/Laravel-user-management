@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Mobile</th>
                 <th>-</th>
             </tr>
             </thead>
@@ -30,8 +31,13 @@
                     </td>
 
                     <td>
+                        {{$user->mobile}}
+                    </td>
+
+                    <td>
                         -
                     </td>
+
                 </tr>
             @endforeach
             </tbody>
