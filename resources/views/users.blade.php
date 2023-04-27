@@ -35,6 +35,12 @@
                     </td>
 
                     <td>
+                        <a href="{{route('user.delete',$user->id)}}" class="btn btn-danger">
+                            &times;
+                        </a>
+                    </td>
+
+                    <td>
                         -
                     </td>
 
