@@ -13,7 +13,7 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::paginate(30);
+        $users = User::orderByDesc('id')->paginate(30);
         return view('users',compact('users'));
     }
 
@@ -32,7 +32,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-        return $request->all();
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+        $user->password = bcrypt($request->password);
+        $user->save();
+        return redirect()->route('user.index');
     }
 
     /**
