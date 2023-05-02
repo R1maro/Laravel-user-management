@@ -8,7 +8,7 @@
             User information
         </h1>
 
-    <form class="" method="post" action="{{route('user.store')}}">
+    <form class="" method="post" @if(isset($user)) action="{{route('user.update',$user->id)}}" @else action="{{route('user.store')}}" @endif>
         @csrf
 
         <div class="row">
@@ -41,7 +41,7 @@
                     <label for="password" class="fs-4 text-white">
                         {{__('Password')}}
                     </label>
-                    <input name="password" type="password" class="form-control p-2 @error('password') is-invalid @enderror" placeholder="{{__('Password')}}" value="{{old('password',$user->password??null)}}"  />
+                    <input name="password" type="password" class="form-control p-2 @error('password') is-invalid @enderror" placeholder="{{__('Password')}}" value="{{old('password')}}"  />
                 </div>
             </div>
             <div class="col-md-6 mt-3">
