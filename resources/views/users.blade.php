@@ -45,7 +45,10 @@
 
                     <td>
                         <a href="{{route('user.delete',$user->id)}}" class="btn btn-danger">
-                            &times;
+                            Delete
+                        </a>
+                        <a href="{{route('user.edit',$user->id)}}" class="btn btn-secondary ms-3">
+                            Edit
                         </a>
                     </td>
 

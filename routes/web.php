@@ -50,7 +50,7 @@ Route::get('/about',function (){
 });
 
 
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -62,6 +62,9 @@ Route::get('/user/create',[\App\Http\Controllers\UserController::class,'create']
 
 Route::post('/user/store',[\App\Http\Controllers\UserController::class,'store'])
     ->name('user.store');
+
+Route::get('/user/edit/{user}',[\App\Http\Controllers\UserController::class,'edit'])
+    ->name('user.edit');
 
 Route::get('/user/delete/{user}', [\App\Http\Controllers\UserController::class, 'destroy'])
     ->name('user.delete');
