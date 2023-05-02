@@ -41,7 +41,7 @@
                     <label for="password" class="fs-4 text-white">
                         {{__('Password')}}
                     </label>
-                    <input name="password" type="password" class="form-control p-2 @error('password') is-invalid @enderror" placeholder="{{__('Password')}}" value="{{old('password')}}"  />
+                    <input name="password" type="password" class="form-control p-2 @error('password') is-invalid @enderror" placeholder="{{__('Password')}}" value="{{old('password',$user->password??null)}}"  />
                 </div>
             </div>
             <div class="col-md-6 mt-3">
