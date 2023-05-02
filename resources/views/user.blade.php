@@ -4,6 +4,10 @@
 
     <div class="container">
 
+        <h1>
+            User information
+        </h1>
+
     <form class="" method="post" action="{{route('user.store')}}">
         @csrf
 

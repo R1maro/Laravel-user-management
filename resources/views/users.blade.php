@@ -3,12 +3,16 @@
 @section('content')
 
 
-    <h1>
+    <h1 class="mb-4">
         Users
-        <a href="{{route('user.create',)}}" class="btn btn-success d-block w-50 m-auto p-2">
+    </h1>
+
+    <div class="mb-3">
+        <a href="{{route('user.create',)}}" class="btn btn-outline-warning d-block w-50 m-auto p-2 fs-5">
             Create new user
         </a>
-    </h1>
+    </div>
+
     <div class="tbl-header">
         <table cellpadding="0" cellspacing="0" class="table table-hover">
             <thead>
@@ -63,7 +67,7 @@
     <div class="made-with-love">
         Made with
         <i>♥</i> by
-        <a target="_blank" href="https://github.com/R1maro">R!maro</a>
+        <a target="_blank" href="https://github.com/R1maro">R1maro</a>
     </div>
 
 
