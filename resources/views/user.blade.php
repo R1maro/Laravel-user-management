@@ -4,7 +4,7 @@
 
     <div class="container">
 
-    <form class="" method="post" action="">
+    <form class="" method="post" action="{{route('user.store')}}">
         @csrf
 
         <div class="row">
