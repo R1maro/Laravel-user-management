@@ -3,7 +3,12 @@
 @section('content')
 
 
-    <h1>Users</h1>
+    <h1>
+        Users
+        <a href="{{route('user.create',)}}" class="btn btn-success d-block w-50 m-auto p-2">
+            Create new user
+        </a>
+    </h1>
     <div class="tbl-header">
         <table cellpadding="0" cellspacing="0" class="table table-hover">
             <thead>

@@ -56,6 +56,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/users',[\App\Http\Controllers\UserController::class,'index'])->name('user.index');
-Route::get('/users/delete/{user}',[\App\Http\Controllers\UserController::class,'destroy'])->name('user.delete');
+Route::get('/user/delete/{user}',[\App\Http\Controllers\UserController::class,'destroy'])
+    ->name('user.delete');
+Route::get('/user/create',[\App\Http\Controllers\UserController::class,'create'])
+    ->name('user.create');
 
 
