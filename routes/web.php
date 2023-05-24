@@ -60,11 +60,11 @@ Route::get('/users',[\App\Http\Controllers\UserController::class,'index'])->name
 Route::get('/user/create',[\App\Http\Controllers\UserController::class,'create'])
     ->name('user.create');
 
-Route::post('/user/store',[\App\Http\Controllers\UserController::class,'store'])
-    ->name('user.store');
-
 Route::get('/user/edit/{user}',[\App\Http\Controllers\UserController::class,'edit'])
     ->name('user.edit');
+
+Route::post('/user/store',[\App\Http\Controllers\UserController::class,'store'])
+    ->name('user.store');
 
 Route::post('/user/update/{user}',[\App\Http\Controllers\UserController::class,'update'])
     ->name('user.update');
