@@ -49,7 +49,7 @@
                     <label for="password_confirm" class="fs-4 text-white">
                         {{__('Password confirm')}}
                     </label>
-                    <input name="password_confirm" type="password" class="form-control p-2 @error('password_confirm') is-invalid @enderror" placeholder="{{__('Password confirm')}}" value="{{old('password_confirm',$user->password_confirm??null)}}"  />
+                    <input name="password_confirm" type="password" class="form-control p-2 @error('password_confirm') is-invalid @enderror" placeholder="{{__('Password confirm')}}" value="{{old('password_confirm')}}"  />
                 </div>
             </div>
             <div class="col-md-12">

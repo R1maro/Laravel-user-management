@@ -64,6 +64,12 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         //
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+        $user->password = bcrypt($request->password);
+        $user->save();
+        return redirect()->route('user.index');
     }
 
     /**
