@@ -11,7 +11,7 @@ class UserSaveRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return auth()->check();
     }
 
     /**
