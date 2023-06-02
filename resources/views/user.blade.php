@@ -8,6 +8,8 @@
             User information
         </h1>
 
+        @include('component.err')
+
     <form class="" method="post" @if(isset($user)) action="{{route('user.update',$user->id)}}" @else action="{{route('user.store')}}" @endif>
         @csrf
 

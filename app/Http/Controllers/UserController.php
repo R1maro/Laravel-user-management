@@ -11,6 +11,16 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function CreateOrUpdate(User $user , UserSaveRequest $request){
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+        $user->password = bcrypt($request->password);
+        $user->save();
+        return $user;
+    }
+
     public function index()
     {
         //
@@ -34,11 +44,7 @@ class UserController extends Controller
     {
         //
         $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->mobile = $request->mobile;
-        $user->password = bcrypt($request->password);
-        $user->save();
+        $this->CreateOrUpdate($user,$request);
         return redirect()->route('user.index');
     }
 
@@ -65,11 +71,7 @@ class UserController extends Controller
     public function update(UserSaveRequest $request, User $user)
     {
         //
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->mobile = $request->mobile;
-        $user->password = bcrypt($request->password);
-        $user->save();
+        $this->CreateOrUpdate($user,$request);
         return redirect()->route('user.index');
     }
 
