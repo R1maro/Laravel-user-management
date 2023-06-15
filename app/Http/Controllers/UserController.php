@@ -45,7 +45,7 @@ class UserController extends Controller
         //
         $user = new User();
         $this->CreateOrUpdate($user,$request);
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with(['message' => 'User inserted']);
     }
 
     /**
