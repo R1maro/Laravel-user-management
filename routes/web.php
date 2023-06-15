@@ -57,19 +57,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/users',[\App\Http\Controllers\UserController::class,'index'])->name('user.index');
 
-Route::get('/user/create',[\App\Http\Controllers\UserController::class,'create'])
+Route::get('/users/create',[\App\Http\Controllers\UserController::class,'create'])
     ->name('user.create');
 
-Route::get('/user/edit/{user}',[\App\Http\Controllers\UserController::class,'edit'])
+Route::get('/users/edit/{user}',[\App\Http\Controllers\UserController::class,'edit'])
     ->name('user.edit');
 
-Route::post('/user/store',[\App\Http\Controllers\UserController::class,'store'])
+Route::post('/users/store',[\App\Http\Controllers\UserController::class,'store'])
     ->name('user.store');
 
-Route::post('/user/update/{user}',[\App\Http\Controllers\UserController::class,'update'])
+Route::post('/users/update/{user}',[\App\Http\Controllers\UserController::class,'update'])
     ->name('user.update');
 
-Route::get('/user/delete/{user}', [\App\Http\Controllers\UserController::class, 'destroy'])
+Route::get('/users/delete/{user}', [\App\Http\Controllers\UserController::class, 'destroy'])
     ->name('user.delete');
 
 

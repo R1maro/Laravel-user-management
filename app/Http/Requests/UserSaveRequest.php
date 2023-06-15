@@ -24,7 +24,8 @@ class UserSaveRequest extends FormRequest
         return [
             //
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255',
+                'unique:users,email,'.$this->user()->id,],
             'mobile' => ['required', 'string', 'min:11', 'max:15'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ];
