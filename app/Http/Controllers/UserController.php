@@ -81,8 +81,9 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+        $name = $user->name;
         $user->delete();
-        return redirect()->route('user.index')->with(['message' => 'User deleted']);
+        return redirect()->route('user.index')->with(['message' => 'User "'.$name.'" deleted']);
 
     }
 }
