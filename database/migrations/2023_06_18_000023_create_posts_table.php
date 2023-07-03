@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug',128)->unique();
             $table->text('body');
-            $table->unsignedBigInteger('views');
+            $table->unsignedBigInteger('views')->default(0);
             $table->string('image')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();

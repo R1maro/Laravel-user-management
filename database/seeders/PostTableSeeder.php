@@ -17,18 +17,17 @@ class PostTableSeeder extends Seeder
     {
 
 
-        \App\Models\Post::factory(100)->create();
-
-
 //        \App\Models\Post::factory(100)->create();
 
-//        for ($i = 0; $i < 20; $i++ ){
-//            $p = new Post();
-//            $p->title = 'my title'.$i;
-//            $p->slug = 'my title'.$i;
-//            $p->body = 'body';
-//            $p->save();
-//
-//        }
+
+
+        for ($i = 0; $i < 20; $i++ ){
+            $p = new Post();
+            $p->title = 'my title'.$i;
+            $p->slug = 'my title'.$i;
+            $p->body = 'body';
+            $p->save();
+
+        }
     }
 }
