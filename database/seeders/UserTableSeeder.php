@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PostTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,5 +13,6 @@ class PostTableSeeder extends Seeder
     public function run(): void
     {
         //
+        \App\Models\User::factory(100)->create();
     }
 }
