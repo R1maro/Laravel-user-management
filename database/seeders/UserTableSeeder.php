@@ -14,5 +14,10 @@ class UserTableSeeder extends Seeder
     {
         //
         \App\Models\User::factory(100)->create();
+
+        \App\Models\User::factory()->create([
+            'name' => 'R1maro',
+            'email' => 'admin@example.com',
+        ]);
     }
 }

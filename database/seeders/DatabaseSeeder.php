@@ -20,12 +20,5 @@ class DatabaseSeeder extends Seeder
            PostTableSeeder::class,
         ]);
 
-         \App\Models\User::factory()->create([
-             'name' => 'R1maro',
-             'email' => 'admin@example.com',
-         ]);
-
-
-
     }
 }
