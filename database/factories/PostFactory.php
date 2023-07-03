@@ -18,6 +18,10 @@ class PostFactory extends Factory
     {
         return [
             //
+            'title' => fake()->realText(50),
+            'slug' => fake()->unique()->realText(50),
+            'body' => fake()->realText(100),
+            'views' => rand(0,200),
         ];
     }
 }
