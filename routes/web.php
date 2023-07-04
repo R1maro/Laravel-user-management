@@ -86,3 +86,15 @@ Route::prefix('users')->name('user.')->group(
     });
 
 
+
+Route::prefix('posts')->name('post.')->group(
+    function () {
+        Route::get('/', [\App\Http\Controllers\PostController::class,'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\PostController::class,'create'])->name('create');
+        Route::get('/edit/{post}', [\App\Http\Controllers\PostController::class,'edit'])->name('edit');
+        Route::post('/store', [\App\Http\Controllers\PostController::class,'store'])->name('store');
+        Route::post('/update/{post}', [\App\Http\Controllers\PostController::class,'update'])->name('update');
+        Route::get('/delete/{post}', [\App\Http\Controllers\PostController::class,'destroy'])->name('delete');
+    });
+
+
