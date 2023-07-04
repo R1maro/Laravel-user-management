@@ -18,6 +18,9 @@ class PostTableSeeder extends Seeder
 
 
         Post::factory(100)->create();
+
+
+//      soft delete gonna save this deleted posts
         Post::inRandomOrder()->limit(3)->delete();
 
 
