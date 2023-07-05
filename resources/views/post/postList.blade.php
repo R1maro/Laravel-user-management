@@ -9,16 +9,21 @@
         @foreach($posts as $post)
             <div class="col-md-4">
                 <div class="card">
-                    <table class="table">
+                    <a href="{{route('post.delete',$post->id)}}" class="delbtn">
+                        Delete
+                    </a>
+                    <table>
                         <tr class="d-block">
+                            <td>
+                                {{$post->image}}
+                                ... ...
+                                ... ...
+                            </td>
                             <td>
                                 {{$post->title}}
                             </td>
                             <td>
                                 {{$post->views}}
-                            </td>
-                            <td>
-                                {{$post->image}}
                             </td>
                         </tr>
                     </table>
