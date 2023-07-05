@@ -1,0 +1,51 @@
+$background-color_2: hsl(208, 100%, 30%);
+
+@keyframes spin {
+    0% {
+        --degree: 1deg;
+    }
+    100% {
+        --degree: 360deg;
+    }
+}
+@property {
+    --degree {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 10deg;
+    }
+}
+.card {
+    width: 30vh;
+    height: 40vh;
+    padding: 2vw;
+    margin: 15px;
+    background-color: $background-color_2;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    &::before {
+        content: "";
+        width: 102%;
+        height: 102%;
+        background: linear-gradient( var(--degree), hsl(60, 100%, 60%) 20%, hsl(120, 100%, 60%) 40%, hsl(180, 100%, 60%) 60%, hsl(240, 100%, 60%) 80%, hsl(300, 100%, 60%) 100% );
+        border-radius: inherit;
+        z-index: -1;
+        animation: spin 3s infinite ease-in-out;
+        will-change: contents;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        top: -1%;
+        left: -1%;
+        background: linear-gradient( var(--degree), hsl(60, 100%, 60%) 20%, hsl(120, 100%, 60%) 40%, hsl(180, 100%, 60%) 60%, hsl(240, 100%, 60%) 80%, hsl(300, 100%, 60%) 100% );
+        border-radius: inherit;
+        filter: blur(20px);
+        z-index: -2;
+        animation: spin 3s infinite ease-in-out;
+        will-change: contents;
+    }
+}
