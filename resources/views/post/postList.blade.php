@@ -5,27 +5,27 @@
 @section('content')
 
 
-    @foreach($posts as $post)
-        <div class="row">
+    <div class="row">
+        @foreach($posts as $post)
             <div class="col-md-4">
                 <div class="card">
-                    <table>
-                    <tr>
-                        <td>
-                            {{$post->title}}
-                        </td>
-                        <td>
-                            {{$post->image}}
-                        </td>
-                        <td>
-                            {{$post->views}}
-                        </td>
-                    </tr>
+                    <table class="table">
+                        <tr class="d-block">
+                            <td>
+                                {{$post->title}}
+                            </td>
+                            <td>
+                                {{$post->views}}
+                            </td>
+                            <td>
+                                {{$post->image}}
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
     {{$posts->links()}}
 
 @endsection
