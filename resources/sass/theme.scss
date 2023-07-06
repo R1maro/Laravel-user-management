@@ -19,7 +19,7 @@ $background-color_2: hsl(208, 100%, 30%);
     width: 30vh;
     height: 40vh;
     padding: 2vw;
-    margin: 15px;
+    margin: 20px 160px;
     background-color: $background-color_2;
     font-size: 15px;
     text-align: center;
@@ -27,7 +27,7 @@ $background-color_2: hsl(208, 100%, 30%);
     &::before {
         content: "";
         width: 100%;
-        height: 100%;
+        height: 5vh;
         background: linear-gradient( var(--degree), hsl(60, 100%, 60%) 20%, hsl(120, 100%, 60%) 40%, hsl(180, 100%, 60%) 60%, hsl(240, 100%, 60%) 80%, hsl(300, 100%, 60%) 100% );
         border-radius: inherit;
         z-index: -1;
@@ -38,7 +38,7 @@ $background-color_2: hsl(208, 100%, 30%);
         content: "";
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 5vh;
         top: -1%;
         left: -1%;
         background: linear-gradient( var(--degree), hsl(60, 100%, 60%) 20%, hsl(120, 100%, 60%) 40%, hsl(180, 100%, 60%) 60%, hsl(240, 100%, 60%) 80%, hsl(300, 100%, 60%) 100% );
@@ -50,15 +50,36 @@ $background-color_2: hsl(208, 100%, 30%);
     }
 }
 
-.delbtn{
-    width: 50px;
-    height: 30px;
+.del-btn{
+    width: 60px;
+    height: 40px;
+    padding-top: 8px;
     position: relative;
-    top: -33px;
+    top: -73px;
     left: 225px;
     background: #ff6361;
     color: black;
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
+    &:hover{
+        color: white;
+    }
+}
+
+.edit-btn{
+    width: 60px;
+    height: 40px;
+    padding-top: 8px;
+    position: relative;
+    top: -112px;
+    left: -65px;
+    background: #2f65ff;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    &:hover{
+        color: white;
+    }
 }

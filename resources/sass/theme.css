@@ -17,7 +17,7 @@
   width: 30vh;
   height: 40vh;
   padding: 2vw;
-  margin: 15px;
+  margin: 20px 160px;
   background-color: hsl(208deg, 100%, 30%);
   font-size: 15px;
   text-align: center;
@@ -26,7 +26,7 @@
 .card::before {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 5vh;
   background: linear-gradient(var(--degree), hsl(60deg, 100%, 60%) 20%, hsl(120deg, 100%, 60%) 40%, hsl(180deg, 100%, 60%) 60%, hsl(240deg, 100%, 60%) 80%, hsl(300deg, 100%, 60%) 100%);
   border-radius: inherit;
   z-index: -1;
@@ -37,7 +37,7 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 5vh;
   top: -1%;
   left: -1%;
   background: linear-gradient(var(--degree), hsl(60deg, 100%, 60%) 20%, hsl(120deg, 100%, 60%) 40%, hsl(180deg, 100%, 60%) 60%, hsl(240deg, 100%, 60%) 80%, hsl(300deg, 100%, 60%) 100%);
@@ -48,17 +48,38 @@
   will-change: contents;
 }
 
-.delbtn {
-  width: 50px;
-  height: 30px;
+.del-btn {
+  width: 60px;
+  height: 40px;
+  padding-top: 8px;
   position: relative;
-  top: -33px;
+  top: -73px;
   left: 225px;
   background: #ff6361;
   color: black;
   text-decoration: none;
   text-align: center;
   border-radius: 5px;
+}
+.del-btn:hover {
+  color: white;
+}
+
+.edit-btn {
+  width: 60px;
+  height: 40px;
+  padding-top: 8px;
+  position: relative;
+  top: -112px;
+  left: -65px;
+  background: #2f65ff;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+.edit-btn:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -9,12 +9,16 @@
         @foreach($posts as $post)
             <div class="col-md-4">
                 <div class="card">
-                    <a href="{{route('post.delete',$post->id)}}" class="delbtn">
+                    <a href="{{route('post.delete',$post->id)}}" class="del-btn">
                         Delete
+                    </a>
+
+                    <a href="{{route('post.edit',$post->id)}}" class="edit-btn">
+                        Edit
                     </a>
                     <table>
                         <tr class="d-block">
-                            <td>
+                            <td class="d-block">
                                 {{$post->image}}
                                 ... ...
                                 ... ...
