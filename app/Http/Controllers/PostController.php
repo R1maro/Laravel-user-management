@@ -63,5 +63,8 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+        $title = $post->title;
+        $post->delete();
+        return redirect()->route('post.index')->with(['message' => 'Post "'.$title.'" deleted']);
     }
 }

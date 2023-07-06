@@ -4,6 +4,7 @@
 @vite(['resources/sass/theme.scss'])
 @section('content')
 
+    @include('component.err')
 
     <div class="row">
         @foreach($posts as $post)
@@ -18,7 +19,7 @@
                     </a>
                     <table>
                         <tr class="d-block">
-                            <td class="d-block">
+                            <td class="position-absolute top-50">
                                 {{$post->image}}
                                 ... ...
                                 ... ...
