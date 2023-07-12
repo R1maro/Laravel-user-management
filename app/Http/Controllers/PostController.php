@@ -20,15 +20,10 @@ class PostController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
         //
-        $post = new Post();
-        $post->title = $request->title;
-        $post->slug = $request->title;
-        $post->body = $request->body;
-        $post->save();
-        return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
+        return view('post.postForm');
     }
 
     /**
@@ -37,6 +32,12 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $post = new Post();
+        $post->title = $request->title;
+        $post->slug = $request->title;
+        $post->body = $request->body;
+        $post->save();
+        return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
     }
 
     /**
