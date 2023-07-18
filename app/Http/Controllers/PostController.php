@@ -10,6 +10,15 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function CreateOrUpdate(Request $request,Post $post){
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->slug = str_replace('','-',$post->title);
+        $post->save();
+
+    }
     public function index()
     {
         //
@@ -33,10 +42,7 @@ class PostController extends Controller
     {
         //
         $post = new Post();
-        $post->title = $request->title;
-        $post->slug = $request->title;
-        $post->body = $request->body;
-        $post->save();
+        $this->CreateOrUpdate();
         return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
     }
 

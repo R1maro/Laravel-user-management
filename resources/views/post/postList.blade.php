@@ -34,7 +34,7 @@
                             <td>
                                 {{$post->title}}
                             </td>
-                            <td>
+                            <td class="float-end">
                                 {{$post->views}}
                             </td>
                         </tr>
