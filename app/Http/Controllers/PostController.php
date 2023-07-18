@@ -11,22 +11,25 @@ class PostController extends Controller
      * Display a listing of the resource.
      */
 
-    public function CreateOrUpdate(Request $request,Post $post){
+    public function CreateOrUpdate(Request $request, Post $post)
+    {
 
         $post->title = $request->title;
         $post->body = $request->body;
-        $post->slug = str_replace('','-',$post->title);
-        if ($request->hasFile('img')
-        )
+        $post->slug = str_replace('', '-', $post->title);
+        if ($request->hasFile('img')) {
+            dd($request->File('img'));
+        }
         $post->save();
         return $post;
 
     }
+
     public function index()
     {
         //
         $posts = Post::latest()->paginate(12);
-        return view('post.postList',compact('posts'));
+        return view('post.postList', compact('posts'));
     }
 
     /**
@@ -45,7 +48,7 @@ class PostController extends Controller
     {
         //
         $post = new Post();
-        $this->CreateOrUpdate($request,$post);
+        $this->CreateOrUpdate($request, $post);
         return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
     }
 
@@ -73,7 +76,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
-        $this->CreateOrUpdate($request,$post);
+        $this->CreateOrUpdate($request, $post);
         return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
     }
 
@@ -85,6 +88,6 @@ class PostController extends Controller
         //
         $title = $post->title;
         $post->delete();
-        return redirect()->route('post.index')->with(['message' => 'Post "'.$title.'" deleted']);
+        return redirect()->route('post.index')->with(['message' => 'Post "' . $title . '" deleted']);
     }
 }
