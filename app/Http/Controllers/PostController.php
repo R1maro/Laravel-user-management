@@ -17,6 +17,7 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->slug = str_replace('','-',$post->title);
         $post->save();
+        return $post;
 
     }
     public function index()
@@ -42,7 +43,7 @@ class PostController extends Controller
     {
         //
         $post = new Post();
-        $this->CreateOrUpdate();
+        $this->CreateOrUpdate($request,$post);
         return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
     }
 
