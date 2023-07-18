@@ -32,7 +32,7 @@
                 <label for="img">
                     {{__('Image')}}
                 </label>
-                <input name="img" type="undefined" class="form-control @error('img') is-invalid @enderror"
+                <input name="img" type="file" class="form-control @error('img') is-invalid @enderror"
                        placeholder="{{__('Image')}}" value="{{old('img',$post->img??null)}}"/>
             </div>
         </div>
