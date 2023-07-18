@@ -71,6 +71,8 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+        $this->CreateOrUpdate($request,$post);
+        return redirect()->route('post.index')->with([['message' => 'Post inserted']]);
     }
 
     /**
