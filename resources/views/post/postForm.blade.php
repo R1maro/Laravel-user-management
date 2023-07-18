@@ -13,6 +13,7 @@
     <div class="container">
 
         <form class="" method="post"
+              enctype="multipart/form-data"
               @if(isset($post)) action="{{route('post.update',$post->id)}}"
               @else action="{{route('post.store')}}"
             @endif>

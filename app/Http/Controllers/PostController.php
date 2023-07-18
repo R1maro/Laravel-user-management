@@ -16,6 +16,8 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->body = $request->body;
         $post->slug = str_replace('','-',$post->title);
+        if ($request->hasFile('img')
+        )
         $post->save();
         return $post;
 
