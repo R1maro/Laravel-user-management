@@ -22,7 +22,7 @@ class PostController extends Controller
 
         $post->title = $request->title;
         $post->body = $request->body;
-        $post->slug = str_replace('', '-', $post->title);
+        $post->slug = str_replace(' ', '-', $post->title);
         if ($request->hasFile('img')) {
             $request->File('img')->storePubliclyAs("/public/posts/",$post->slug.'.jpg');
             $post->image = "/public/posts/".$post->slug.'.jpg';
