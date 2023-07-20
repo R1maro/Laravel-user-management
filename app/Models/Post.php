@@ -39,4 +39,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Post extends Model
 {
     use HasFactory,SoftDeletes;
+
+    public function imgUrl(){
+        return str_replace('public','storage',$this->image);
+    }
 }

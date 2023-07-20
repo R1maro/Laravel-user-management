@@ -27,7 +27,7 @@
                     <table>
                         <tr class="d-block">
                             <td class="position-absolute top-50">
-                                <img src="storage/{{$post->image}}" alt="...">
+                                <img src="{{$post->imgUrl()}}" alt="...">
                             </td>
                             <td>
                                 {{$post->title}}
