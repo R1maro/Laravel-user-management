@@ -24,19 +24,17 @@
                     <a href="{{route('post.edit',$post->id)}}" class="edit-btn">
                         Edit
                     </a>
-                    <table>
-                        <tr class="d-block">
-                            <td class="position-absolute top-50">
-                                <img src="{{$post->imgUrl()}}" alt="...">
-                            </td>
-                            <td>
-                                {{$post->title}}
-                            </td>
-                            <td class="float-end">
-                                {{$post->views}}
-                            </td>
-                        </tr>
-                    </table>
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="{{$post->imgUrl()}}" class="post-img" alt="...">
+                        <li class="float-start">
+                            Title: {{$post->title}}
+                        </li>
+                        <li class="float-end">
+                            Views:{{$post->views}}
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         @endforeach

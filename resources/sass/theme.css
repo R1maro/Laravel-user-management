@@ -82,4 +82,10 @@
   color: white;
 }
 
+.post-img {
+  position: relative;
+  top: -80px;
+  height: 120px;
+}
+
 /*# sourceMappingURL=theme.css.map */
