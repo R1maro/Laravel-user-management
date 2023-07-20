@@ -18,7 +18,8 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->slug = str_replace('', '-', $post->title);
         if ($request->hasFile('img')) {
-            $request->File('img')->storePubliclyAs("/public/posts".$post->slug.'.jpg');
+            $request->File('img')->storePubliclyAs("/public/posts",$post->slug.'.jpg');
+            $post->image = "/public/posts".$post->slug.'.jpg';
         }
         $post->save();
         return $post;
@@ -67,7 +68,7 @@ class PostController extends Controller
     {
         //
 
-        return view('post.postForm');
+        return view('post.postForm',compact('post'));
     }
 
     /**
