@@ -27,10 +27,10 @@
                     <ul class="list-unstyled">
                         <li>
                             <img src="{{$post->imgUrl()}}" class="post-img" alt="...">
-                        <li class="float-start">
+                        <li>
                             Title: {{$post->title}}
                         </li>
-                        <li class="float-end">
+                        <li>
                             Views:{{$post->views}}
                         </li>
 
