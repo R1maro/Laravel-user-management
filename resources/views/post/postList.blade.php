@@ -31,7 +31,7 @@
                             Title: {{$post->title}}
                         </li>
                         <li class="mb-1">
-                            Views:{{$post->views}}
+                            Views:{{$post->views}} &#x1F441;
                         </li>
 
                     </ul>
