@@ -41,6 +41,9 @@ class Post extends Model
     use HasFactory,SoftDeletes;
 
     public function imgUrl(){
+        if ($this->image == null){
+            return asset('images/logo.png');
+        }
         return str_replace('public','storage',$this->image);
     }
     public function getRouteKeyName()
