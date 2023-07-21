@@ -33,6 +33,9 @@
                         <li class="mb-1">
                             Views:{{$post->views}} &#x1F441;
                         </li>
+                        <li class="mt-2">
+                            Create Date: {{$post->created_at}}
+                        </li>
 
                     </ul>
                 </div>
