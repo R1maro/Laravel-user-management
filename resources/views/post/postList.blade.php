@@ -17,11 +17,11 @@
         @foreach($posts as $post)
             <div class="col-md-4">
                 <div class="card">
-                    <a href="{{route('post.delete',$post->id)}}" class="del-btn">
+                    <a href="{{route('post.delete',$post->slug)}}" class="del-btn">
                         Delete
                     </a>
 
-                    <a href="{{route('post.edit',$post->id)}}" class="edit-btn">
+                    <a href="{{route('post.edit',$post->slug)}}" class="edit-btn">
                         Edit
                     </a>
                     <ul class="list-unstyled">

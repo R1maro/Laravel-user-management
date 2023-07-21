@@ -43,4 +43,8 @@ class Post extends Model
     public function imgUrl(){
         return str_replace('public','storage',$this->image);
     }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

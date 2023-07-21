@@ -14,7 +14,7 @@
 
         <form class="" method="post"
               enctype="multipart/form-data"
-              @if(isset($post)) action="{{route('post.update',$post->id)}}"
+              @if(isset($post)) action="{{route('post.update',$post->slug)}}"
               @else action="{{route('post.store')}}"
             @endif>
 
