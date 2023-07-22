@@ -34,7 +34,10 @@
                             Views:{{$post->views}} &#x1F441;
                         </li>
                         <li class="mt-2">
-                            Create Date: {{$post->created_at}}
+                            Create Date: {{$post->created_at->diffForHumans()}}
+                        </li>
+                        <li class="mt-2">
+                            Update Date: {{$post->updated_at->diffForHumans()}}
                         </li>
 
                     </ul>
