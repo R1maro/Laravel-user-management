@@ -8,9 +8,10 @@
         Post information
     </h1>
 
-    @include('component.err')
 
     <div class="container">
+
+        @include('component.err')
 
         <form class="" method="post"
               enctype="multipart/form-data"
