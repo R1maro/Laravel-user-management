@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostSaveRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class PostController extends Controller
     }
 
 
-    public function CreateOrUpdate(Request $request, Post $post)
+    public function CreateOrUpdate(PostSaveRequest $request, Post $post)
     {
 
         $post->title = $request->title;
@@ -51,7 +52,7 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PostSaveRequest $request)
     {
         //
         $post = new Post();
@@ -81,7 +82,7 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(PostSaveRequest $request, Post $post)
     {
         //
         $this->CreateOrUpdate($request, $post);
