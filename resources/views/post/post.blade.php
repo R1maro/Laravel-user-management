@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <img height="500" src="{{$post->imgUrl()}}" alt="">
+        <img height="500" src="{{$post->imgUrl()}}" alt="" class="mt-5 mb-5">
 
         <p class="fs-5 mt-5 usual-text text-white">
             {{$post->body}}

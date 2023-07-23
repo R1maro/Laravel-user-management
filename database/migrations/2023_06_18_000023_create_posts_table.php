@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title',128);
             $table->string('slug',128)->unique();
             $table->text('body');
             $table->unsignedBigInteger('views')->default(0);
