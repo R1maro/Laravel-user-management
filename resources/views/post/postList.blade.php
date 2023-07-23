@@ -25,7 +25,7 @@
                         Edit
                     </a>
                     <a href="{{route('post.show',$post->slug)}}" class="btn btn-success w-50 m-auto show-btn">
-                        Show this post
+                        View
                     </a>
                     <ul class="list-unstyled">
                         <li>
