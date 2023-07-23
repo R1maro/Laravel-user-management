@@ -20,7 +20,7 @@ class PostFactory extends Factory
             //
             'title' => fake()->realText(50),
             'slug' => fake()->unique()->realText(50),
-            'body' => fake()->realText(100),
+            'body' => fake()->realText(500),
             'views' => rand(0,200),
         ];
     }
