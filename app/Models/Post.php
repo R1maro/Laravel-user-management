@@ -40,6 +40,8 @@ class Post extends Model
 {
     use HasFactory,SoftDeletes;
 
+    protected $dates = ['created_at','updated_at'];
+
     public function imgUrl(){
         if ($this->image == null){
             return asset('images/logo.png');
