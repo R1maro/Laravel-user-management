@@ -91,7 +91,7 @@ Route::prefix('posts')->name('post.')->group(
     function () {
         Route::get('/', [\App\Http\Controllers\PostController::class,'index'])->name('index');
         Route::get('/create', [\App\Http\Controllers\PostController::class,'create'])->name('create');
-        Route::get('/show', [\App\Http\Controllers\PostController::class,'show'])->name('show');
+        Route::get('/show/{post}', [\App\Http\Controllers\PostController::class,'show'])->name('show');
         Route::get('/edit/{post}', [\App\Http\Controllers\PostController::class,'edit'])->name('edit');
         Route::post('/store', [\App\Http\Controllers\PostController::class,'store'])->name('store');
         Route::post('/update/{post}', [\App\Http\Controllers\PostController::class,'update'])->name('update');
