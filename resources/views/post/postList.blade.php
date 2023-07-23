@@ -24,6 +24,9 @@
                     <a href="{{route('post.edit',$post->slug)}}" class="edit-btn">
                         Edit
                     </a>
+                    <a href="{{route('post.show',$post->slug)}}" class="btn btn-success w-50 m-auto show-btn">
+                        Show this post
+                    </a>
                     <ul class="list-unstyled">
                         <li>
                             <img src="{{$post->imgUrl()}}" class="post-img" alt="...">

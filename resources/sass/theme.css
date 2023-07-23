@@ -86,4 +86,9 @@
   margin-bottom: 20px;
 }
 
+.show-btn {
+  position: relative;
+  top: -58px;
+}
+
 /*# sourceMappingURL=theme.css.map */
