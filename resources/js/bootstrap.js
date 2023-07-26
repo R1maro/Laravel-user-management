@@ -9,6 +9,9 @@ import 'bootstrap';
 import axios from 'axios';
 window.axios = axios;
 
+import jquery from 'jquery';
+window.Jquery = jquery;
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
@@ -18,6 +21,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  */
 
 // import Echo from 'laravel-echo';
+
+import './panel.js'
 
 // import Pusher from 'pusher-js';
 // window.Pusher = Pusher;
