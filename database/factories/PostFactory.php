@@ -16,10 +16,11 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        $title = fake()->unique()->realText(50);
         return [
             //
-            'title' => fake()->realText(50),
-            'slug' => fake()->unique()->realText(50),
+            'title' => $title,
+            'slug' => str_replace(' ', '-',$title),
             'body' => fake()->realText(500),
             'views' => rand(0,200),
         ];
