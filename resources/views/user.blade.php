@@ -14,7 +14,7 @@
         @csrf
 
         <div class="row">
-            <div class="col-md-4 mt-3">
+            <div class="col-md-3 mt-3">
                 <div class="form-group">
                     <label for="name" class="fs-4 text-white">
                         {{__('Name')}}
@@ -22,7 +22,7 @@
                     <input name="name" type="text" class="form-control p-2 @error('name') is-invalid @enderror" placeholder="{{__('Name')}}" value="{{old('name',$user->name??null)}}"  />
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
+            <div class="col-md-3 mt-3">
                 <div class="form-group">
                     <label for="email" class="fs-4 text-white">
                         {{__('Email address')}}
@@ -30,12 +30,20 @@
                     <input name="email" type="email" class="form-control p-2 @error('email') is-invalid @enderror" placeholder="{{__('Email address')}}" value="{{old('email',$user->email??null)}}"  />
                 </div>
             </div>
-            <div class="col-md-4 mt-3">
+            <div class="col-md-3 mt-3">
                 <div class="form-group">
                     <label for="mobile" class="fs-4 text-white">
                         {{__('Mobile')}}
                     </label>
                     <input name="mobile" type="tel" class="form-control p-2 @error('mobile') is-invalid @enderror" placeholder="{{__('Mobile')}}" value="{{old('mobile',$user->mobile??null)}}"  />
+                </div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="form-group">
+                    <label for="credit" class="fs-4 text-white">
+                        {{__('Credit')}}
+                    </label>
+                    <input name="credit" type="text" class="form-control p-2 @error('credit') is-invalid @enderror" placeholder="{{__('Credit')}}" value="{{old('credit',$user->credit??null)}}"  />
                 </div>
             </div>
             <div class="col-md-6 mt-3">
