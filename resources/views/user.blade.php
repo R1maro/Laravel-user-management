@@ -43,7 +43,7 @@
                     <label for="credit" class="fs-4 text-white">
                         {{__('Credit')}}
                     </label>
-                    <input name="credit" type="text" class="form-control p-2 @error('credit') is-invalid @enderror" placeholder="{{__('Credit')}}" value="{{old('credit',$user->credit??null)}}"  />
+                    <input name="credit" type="text" class="currency form-control p-2 @error('credit') is-invalid @enderror" placeholder="{{__('Credit')}}" value="{{old('credit',$user->credit??null)}}"  />
                 </div>
             </div>
             <div class="col-md-6 mt-3">
