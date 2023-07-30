@@ -46,7 +46,14 @@
                     <input name="credit" type="text" class="currency form-control p-2 @error('credit') is-invalid @enderror" placeholder="{{__('Credit')}}" value="{{old('credit',$user->credit??null)}}"  />
                 </div>
             </div>
-            <div class="col-md-6 mt-3">
+            <div class="col-md-4 mt-3">
+                <div class="form-group">
+                    <label for="dob" class="fs-4 text-white">
+                        {{__('Date of birth')}}
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
                 <div class="form-group">
                     <label for="password" class="fs-4 text-white">
                         {{__('Password')}}
@@ -54,7 +61,7 @@
                     <input name="password" type="password" class="form-control p-2 @error('password') is-invalid @enderror" placeholder="{{__('Password')}}" value="{{old('password')}}"  />
                 </div>
             </div>
-            <div class="col-md-6 mt-3">
+            <div class="col-md-4 mt-3">
                 <div class="form-group">
                     <label for="password_confirmation" class="fs-4 text-white">
                         {{__('Password confirm')}}
