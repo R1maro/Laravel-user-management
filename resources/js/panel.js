@@ -17,12 +17,16 @@ function commafy( num ) {
 
 window.addEventListener('load',function () {
     window.jquery(function ($) {
-        $('.currency').focus(function () {
+        $(".currency").focus(function () {
             $(this).val(commafy($(this).val()));
         })
 
-        $('.currency').blur(function () {
+        $(".currency").blur(function () {
             $(this).val(uncomma($(this).val()));
+        })
+
+        $(".currency").keyup(function () {
+          $(this).val(commafy(uncomma($(this).val())))
         })
     });
 })
