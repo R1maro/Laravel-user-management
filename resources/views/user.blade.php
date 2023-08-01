@@ -51,9 +51,9 @@
                     <label for="dob" class="fs-4 text-white">
                         {{__('Date of birth')}}
                     </label>
-                    <datepicker>
-
-                    </datepicker>
+                    <div id="app">
+                        <datepicker></datepicker>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 mt-3">

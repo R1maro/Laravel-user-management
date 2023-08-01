@@ -17,9 +17,16 @@ const app = createApp({});
 
 // import ExampleComponent from './components/ExampleComponent.vue';
 // app.component('example-component', ExampleComponent);
+//
+
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+app.component('VueDatePicker', VueDatePicker);
+
 
 import DatePicker from './components/DatePicker.vue';
 app.component('datepicker', DatePicker);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,6 +35,7 @@ app.component('datepicker', DatePicker);
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+
 
 // Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
 //     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);

@@ -1,17 +1,21 @@
-<script>
-import {defineComponent} from 'vue'
-
-export default defineComponent({
-    name: "DatePicker"
-})
-</script>
-
 <template>
-    <div>
-        DatePicker
-    </div>
+    <VueDatePicker v-model="date"></VueDatePicker>
 </template>
 
-<style scoped>
+<script>
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+
+export default {
+    components: {VueDatePicker},
+    data() {
+        return {
+            date: null,
+        };
+    }
+}
+</script>
+
+<style>
 
 </style>
